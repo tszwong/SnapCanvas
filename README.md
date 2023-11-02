@@ -5,7 +5,7 @@ SnapCanvas is a photo gallery site that allows users to upload and/or browse thr
 # Tech Stack
 Front-End: HTML/CSS, Bootstrap, React
 
-Backend: JS, Python, Flask
+Backend: JS, (Python+Flask or NodeJS)
 
 Database + Authentication: Firebase, MongoDB
 
