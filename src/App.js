@@ -19,16 +19,17 @@ function App() {
                 {/* Navigation */}
                 <nav>
                     <ul>
+                        {/*this will replaced with logo later*/}
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about-us">About Us</Link></li>
-                        <li><Link to="/history">History</Link></li>
-                        <li><Link to="/membership">Membership</Link></li>
                         <li>
                             <div className="search-container">
                                 <input type="text" placeholder="Search..." />
                                 <button>Search</button>
                             </div>
                         </li>
+                        <li><Link to="/about-us">About Us</Link></li>
+                        <li><Link to="/history">History</Link></li>
+                        <li><Link to="/membership">Membership</Link></li>
                     </ul>
                 </nav>
 

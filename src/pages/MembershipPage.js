@@ -1,7 +1,7 @@
 import React from 'react';
 
 function MembershipPage() {
-    return <h1>Welcome to SnapCanvas' Premium Option</h1>;
+    return <h1>SnapCanvas Premium Subscription</h1>;
 }
 
 export default MembershipPage;

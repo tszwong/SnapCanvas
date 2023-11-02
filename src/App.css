@@ -9,9 +9,15 @@
 
 nav ul {
   display: flex;
-  gap: 15px; /* Spacing between items */
+  gap: 1vw; /* Spacing between items */
   list-style-type: none; /* Remove bullet points */
   padding: 0; /* Remove padding */
+}
+
+nav a {
+  padding: 2vw;
+  text-decoration: none;
+  font-size: calc(1vw + 0.5em); /* Basic responsive font size */
 }
 
 nav li {
@@ -20,22 +26,23 @@ nav li {
 
 .search-container {
   display: flex;
-  gap: 10px; /* Space between input and button */
+  height: 2.5vh;
+  gap: 1vw; /* Space between input and button */
   margin-left: auto; /* Push it to the right side of the nav if you want */
 }
 
 .search-container input[type="text"] {
-  padding: 5px 10px;
-  font-size: 16px;
-  border-radius: 4px;
+  width: 40vw; /* Set the width of the input box */
+  padding: calc(0.5vh + 0.5vw);
+  font-size: calc(1vw + 0.5em); /* Responsive font size */
+  border-radius: 0.5vw;
   border: 1px solid #ccc;
 }
 
 .search-container button {
-  padding: 5px 15px;
-  font-size: 16px;
+  font-size: calc(1vw + 0.5em); /* Responsive font size */
   border: none;
-  border-radius: 4px;
+  border-radius: 0.5vw;
   background-color: #007bff; /* Choose your color */
   color: white;
   cursor: pointer;
@@ -44,7 +51,6 @@ nav li {
 .search-container button:hover {
   background-color: #0056b3; /* A bit darker for hover effect */
 }
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
