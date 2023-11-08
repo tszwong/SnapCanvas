@@ -15,37 +15,61 @@ nav ul {
 }
 
 nav a {
-  padding: 2vw;
+  padding: 1vw 1vw 1vh;
   text-decoration: none;
-  font-size: calc(1vw + 0.5em); /* Basic responsive font size */
+  font-size: calc(2px + 1.5vh); /* Basic responsive font size */
 }
 
 nav li {
   margin: 0; /* Remove margins */
 }
 
+.text-content {
+  max-width: 80%; /* This will make the inner div take up 80% of the column width */
+  text-align: left; /* This ensures the text is left-aligned */
+}
+
 .search-container {
+  padding-top: 0.5vh;
   display: flex;
-  height: 2.5vh;
   gap: 1vw; /* Space between input and button */
   margin-left: auto; /* Push it to the right side of the nav if you want */
 }
 
 .search-container input[type="text"] {
   width: 40vw; /* Set the width of the input box */
-  padding: calc(0.5vh + 0.5vw);
-  font-size: calc(1vw + 0.5em); /* Responsive font size */
-  border-radius: 0.5vw;
+  font-size: calc(2px + 1.5vh); /* Basic responsive font size */
+  border-radius: 0.2vw;
   border: 1px solid #ccc;
 }
 
 .search-container button {
-  font-size: calc(1vw + 0.5em); /* Responsive font size */
+  font-size: calc(2px + 1.5vh); /* Basic responsive font size */
   border: none;
-  border-radius: 0.5vw;
+  border-radius: 0.2vw;
   background-color: #007bff; /* Choose your color */
   color: white;
   cursor: pointer;
+}
+
+.row.frame {
+  flex-wrap: nowrap;
+}
+
+.col-4 {
+  text-align: justify;
+}
+
+.not-first {
+  margin-top: 10vh;
+}
+
+.img-fluid {
+  padding-top: 0.5vh;
+}
+
+.footer {
+  margin-top: 15vh;
 }
 
 .search-container button:hover {
@@ -79,5 +103,11 @@ nav li {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search-container input[type="text"] {
+    width: 30vw; /* Set the width of the input box */
   }
 }

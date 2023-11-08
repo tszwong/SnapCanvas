@@ -1,7 +1,14 @@
 import React from 'react';
+import Footer from '../components/footer.js';
 
 function HomePage() {
-    return <h1>Welcome to SnapCanvas</h1>;
+    return (
+        <div className={"container"}>
+            <h1>Welcome to SnapCanvas</h1>
+
+            <Footer/>
+        </div>
+    );
 }
 
 export default HomePage;

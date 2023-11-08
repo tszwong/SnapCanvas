@@ -17,20 +17,23 @@ function App() {
         <Router>
             <div>
                 {/* Navigation */}
-                <nav>
-                    <ul>
-                        {/*this will replaced with logo later*/}
-                        <li><Link to="/">Home</Link></li>
-                        <li>
-                            <div className="search-container">
-                                <input type="text" placeholder="Search..." />
-                                <button>Search</button>
-                            </div>
-                        </li>
-                        <li><Link to="/about-us">About Us</Link></li>
-                        <li><Link to="/history">History</Link></li>
-                        <li><Link to="/membership">Membership</Link></li>
-                    </ul>
+                <nav className="navbar bg-body-tertiary"> {/* Use className instead of class */}
+                    <div className="container-fluid"> {/* Use className instead of class */}
+                        <ul>
+                            {/*this will replaced with logo later*/}
+                            <li><Link to="/">Home</Link></li>
+                            <li>
+                                <div className="search-container">
+                                    <input type="text" placeholder="Search..." />
+                                    <button>Search</button>
+                                </div>
+                            </li>
+                            <li><Link to="/about-us">About Us</Link></li>
+                            <li><Link to="/history">History</Link></li>
+                            <li><Link to="/membership">Membership</Link></li>
+                            <li><Link to="">Upload</Link></li>
+                        </ul>
+                    </div>
                 </nav>
 
 
