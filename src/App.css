@@ -29,28 +29,7 @@ nav li {
   text-align: left; /* This ensures the text is left-aligned */
 }
 
-.search-container {
-  padding-top: 0.5vh;
-  display: flex;
-  gap: 1vw; /* Space between input and button */
-  margin-left: auto; /* Push it to the right side of the nav if you want */
-}
 
-.search-container input[type="text"] {
-  width: 40vw; /* Set the width of the input box */
-  font-size: calc(2px + 1.5vh); /* Basic responsive font size */
-  border-radius: 0.2vw;
-  border: 1px solid #ccc;
-}
-
-.search-container button {
-  font-size: calc(2px + 1.5vh); /* Basic responsive font size */
-  border: none;
-  border-radius: 0.2vw;
-  background-color: #007bff; /* Choose your color */
-  color: white;
-  cursor: pointer;
-}
 
 .row.frame {
   flex-wrap: nowrap;
@@ -70,6 +49,7 @@ nav li {
 
 .footer {
   margin-top: 15vh;
+  margin-bottom: 5vh;
 }
 
 .search-container button:hover {
