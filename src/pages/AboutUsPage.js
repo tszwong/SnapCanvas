@@ -1,7 +1,9 @@
 import React from 'react';
 import Footer from '../components/footer.js';
+import PhotoPost from "../components/PhotoPost";
 
 import ski_photo_placeholder from '../assets/ski_photo_placeholder.jpg';
+import ImgDesc from "../components/PhotoPost";
 
 // Profile component for displaying an image
 const Profile = ({ imageSrc, altText, id }) => (
@@ -21,18 +23,6 @@ const TextColumn = ({ text }) => (
 const TextRow = ({ text }) => (
     <div className="col-12">
         {text}
-    </div>
-);
-
-// one third image, two third text component
-const ImgDesc = ({ imageSrc, altText, id, text }) => (
-    <div className="row">
-        <div className="col-4">
-            <img src={imageSrc} alt={altText} className="img-fluid" id={id}/>
-        </div>
-        <div className="col-8">
-            {text}
-        </div>
     </div>
 );
 
@@ -60,7 +50,6 @@ function AboutUsPage() {
             </div>
 
             {/* If you have more rows of profiles and text, you can repeat them here */}
-            {/* Example of another row: */}
             <div className="row frame not-first">
                 <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="second_image" />
                 <TextColumn text={placeholder} />
@@ -78,8 +67,13 @@ function AboutUsPage() {
             </div>
 
             <div className="row frame not-first">
-                <ImgDesc imageSrc={ski_photo_placeholder} altText="Placeholder" id="first_image" text={placeholder}>
-                </ImgDesc>
+                <ImgDesc
+                    imageSrc={ski_photo_placeholder}
+                    altText={"Placeholder"}
+                    title={"Sample Title"}
+                    date={"Nov 8, 2023"}
+                    description={placeholder}
+                />
             </div>
 
             <Footer/>
