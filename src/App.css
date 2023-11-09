@@ -29,7 +29,18 @@ nav li {
   text-align: left; /* This ensures the text is left-aligned */
 }
 
+#profile-photo-caption {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  background-color: #bdbdbd;
+}
 
+#team-badge {
+  margin-top: 4vh;
+  margin-bottom: 1vh;
+}
 
 .row.frame {
   flex-wrap: nowrap;
@@ -41,6 +52,10 @@ nav li {
 
 .not-first {
   margin-top: 10vh;
+}
+
+.first {
+  margin-top: 5vh;
 }
 
 .img-fluid {
