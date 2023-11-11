@@ -49,7 +49,6 @@ function AboutUsPage() {
                 <TextColumn text={placeholder} />
             </div>
 
-            {/* If you have more rows of profiles and text, you can repeat them here */}
             <div className="row frame not-first">
                 <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="second_image" />
                 <TextColumn text={placeholder} />
