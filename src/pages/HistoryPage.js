@@ -25,6 +25,8 @@ function HistoryPage() {
 
     return (
         <div className={"container"}>
+
+            {/* this will probably be replaced later idk */}
             <h1>SnapCanvas History</h1>
 
             <div>
@@ -32,6 +34,9 @@ function HistoryPage() {
                     <Badge id={"team-badge"} bg={"dark"}>Meet Our Team</Badge>
                 </h1>
             </div>
+            {/* members profiles section, will need portraits of each memeber + a short description about
+                themselves and whatever else you want
+             */}
             <div className="row frame">
                 <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
                          name={"Tsz Kit Wong"} major={"Computer Science"} description={placeholder}/>
@@ -43,6 +48,7 @@ function HistoryPage() {
                          name={"Tyler"} major={"Placeholder"} description={placeholder}/>
             </div>
 
+            {/* beginning of the features section, what features have been implemented when */}
             <div className="row frame first">
                 <ImgDesc
                     imageSrc={ski_photo_placeholder}
@@ -79,6 +85,8 @@ function HistoryPage() {
                     description={placeholder}
                 />
             </div>
+
+            {/* probably need to add more to features to footer besides the credits */}
             <Footer/>
         </div>
     );

@@ -1,9 +1,10 @@
 import React from 'react';
+
+// Component + Asset imports
 import Footer from '../components/footer.js';
 import PhotoPost from "../components/PhotoPost";
-
-import ski_photo_placeholder from '../assets/ski_photo_placeholder.jpg';
 import ImgDesc from "../components/PhotoPost";
+import ski_photo_placeholder from '../assets/ski_photo_placeholder.jpg';
 
 // Profile component for displaying an image
 const Profile = ({ imageSrc, altText, id }) => (
@@ -13,6 +14,7 @@ const Profile = ({ imageSrc, altText, id }) => (
 );
 
 // TextColumn component for displaying text
+// text will occupy 1/3 of the columns of the grid
 const TextColumn = ({ text }) => (
     <div className="col-4">
         {text}
@@ -20,6 +22,7 @@ const TextColumn = ({ text }) => (
 );
 
 // TextRow component for displaying text
+// text will occupy the entire 12 columns of the grid
 const TextRow = ({ text }) => (
     <div className="col-12">
         {text}
@@ -41,8 +44,11 @@ function AboutUsPage() {
 
     return (
         <div className="container">
+
+            {/* this will probably be replaced later idk */}
             <h1>About SnapCanvas</h1>
 
+            {/* main content section, still need to decide what to put for each */}
             <div className="row frame">
                 <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="first_image" />
                 <TextColumn text={placeholder} />

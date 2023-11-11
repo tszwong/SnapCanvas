@@ -29,6 +29,7 @@ nav li {
   text-align: left; /* This ensures the text is left-aligned */
 }
 
+/* the caption under the member's profile photos */
 #profile-photo-caption {
   text-align: center;
   font-weight: bold;
@@ -37,6 +38,7 @@ nav li {
   background-color: #bdbdbd;
 }
 
+/* team badge in the history page */
 #team-badge {
   margin-top: 4vh;
   margin-bottom: 1vh;
@@ -46,14 +48,15 @@ nav li {
   flex-wrap: nowrap;
 }
 
+/* to make text that are in 4-column boxes look neater */
 .col-4 {
   text-align: justify;
 }
 
+/* style for the 1/3 photo 2/3 text components, cleaner spacing */
 .not-first {
   margin-top: 10vh;
 }
-
 .first {
   margin-top: 5vh;
 }
@@ -65,10 +68,6 @@ nav li {
 .footer {
   margin-top: 15vh;
   margin-bottom: 5vh;
-}
-
-.search-container button:hover {
-  background-color: #0056b3; /* A bit darker for hover effect */
 }
 
 @media (prefers-reduced-motion: no-preference) {

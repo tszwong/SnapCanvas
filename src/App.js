@@ -8,6 +8,7 @@ import {
     Link
 } from 'react-router-dom';
 
+// react and Bootstrap imports
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -15,6 +16,8 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
 
+
+// pages imports
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import HistoryPage from './pages/HistoryPage';
