@@ -3,18 +3,12 @@ import React from 'react';
 import Footer from '../components/footer.js';
 import PhotoPost from "../components/PhotoPost";
 import ImgDesc from "../components/PhotoPost";
+import Profile from "../components/ProfileModalComponent"
 import ski_photo_placeholder from "../assets/ski_photo_placeholder.jpg";
 
 // Bootstrap imports
 import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
-
-const Profile = ({ imageSrc, altText, id, name, year, major }) => (
-    <div className="col-3 polaroid">
-        <img src={imageSrc} alt={altText} className="img-fluid" id={id}/>
-        <p id={"profile-photo-caption"}>{name}, {major}</p>
-    </div>
-);
 
 function HistoryPage() {
     // random generated place holder text
@@ -39,14 +33,14 @@ function HistoryPage() {
                 </h1>
             </div>
             <div className="row frame">
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="first_image"
-                         name={"Tsz Kit Wong"} major={"Computer Science"}/>
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="first_image"
-                         name={"Tia Zheng"} major={"Computer Science + Math"}/>
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="first_image"
-                         name={"Simon Yu"} major={"Placeholder"}/>
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder" id="first_image"
-                         name={"Tyler"} major={"Placeholder"}/>
+                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
+                         name={"Tsz Kit Wong"} major={"Computer Science"} description={placeholder}/>
+                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
+                         name={"阿姨 Zheng"} major={"Computer Science + Math"} description={placeholder}/>
+                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
+                         name={"Simon Yu"} major={"Placeholder"} description={placeholder}/>
+                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
+                         name={"Tyler"} major={"Placeholder"} description={placeholder}/>
             </div>
 
             <div className="row frame first">
