@@ -4,11 +4,14 @@ SnapCanvas is a photo gallery site that allows users to upload and/or browse thr
 
 # Tech Stack
 Front-End: HTML/CSS, Bootstrap, React
+
 Backend: JS, (Python+Flask or NodeJS) // TBD if we have time
+
 Database + Authentication: Firebase, MongoDB // TBD if we have time
 
-# API Used
-https://www.pexels.com/api/
+API Used: https://www.pexels.com/api/
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
