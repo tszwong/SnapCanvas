@@ -7,6 +7,18 @@
   pointer-events: none;
 }
 
+#light {
+  background-color: #fff;
+}
+
+#dark {
+  background-color: #000;
+}
+
+#dark #nav-styles {
+  background-color: #000 !important;
+}
+
 nav ul {
   display: flex;
   gap: 1vw; /* Spacing between items */

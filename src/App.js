@@ -9,14 +9,17 @@ import {
     Link
 } from 'react-router-dom';
 
-// react and Bootstrap imports
+// React, Material UI, and Bootstrap imports
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 // component imports
 import SearchBar from './components/SearchBar';
+import DarkModeToggle from "./components/DarkModeToggle";
 
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
@@ -24,54 +27,80 @@ import HistoryPage from './pages/HistoryPage';
 import MembershipPage from './pages/MembershipPage';
 import SearchResultsPage from './pages/SearchResultsPage';
 
+export const ModeContext = React.createContext(null);
+
 function App() {
+    // initializing mode state
+    const [mode, setMode] = useState("light");
+
+    // function that changes the state of mode from light to dark or dark to light
+    const toggleMode = () => {
+        setMode((current) => (current === "light" ? "dark" : "light"));
+    }
+
     return (
-        <Router>
-            <div>
-                {/* Navigation, using React Bootstrap to make things easier */}
-                <Navbar expand="lg" className="bg-body-tertiary">
-                    <Container fluid>
+        // allows us to access mode and toggleMode
+        <ModeContext.Provider value={{ mode, toggleMode }}>
 
-                        {/* will be uncommented and used when we have some sort of logo created */}
-                        {/*<Navbar.Brand as={Link} to="/">*/}
-                        {/*    <img src={logo} alt="Logo" width="30" height="30" />*/}
-                        {/*</Navbar.Brand>*/}
+            <div id={mode}>
+                <Router>
+                    <div>
+                        {/* Navigation, using React Bootstrap to make things easier */}
+                        <Navbar expand="lg" className="bg-body-tertiary" id={"nav-styles"}>
+                            <Container fluid>
 
-                        {/* hamburger nav will be enabled for smaller screens*/}
-                        <Navbar.Toggle aria-controls="navbar-nav" />
-                        <Navbar.Collapse id="navbar-nav">
+                                {/* will be uncommented and used when we have some sort of logo created */}
+                                {/*<Navbar.Brand as={Link} to="/">*/}
+                                {/*    <img src={logo} alt="Logo" width="30" height="30" />*/}
+                                {/*</Navbar.Brand>*/}
 
-                            {/* home link, potentially replaced with logo later */}
-                            <Nav className="me-auto" style={{ marginLeft: "5vw" }}>
-                                <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            </Nav>
+                                {/* hamburger nav will be enabled for smaller screens*/}
+                                <Navbar.Toggle aria-controls="navbar-nav" />
+                                <Navbar.Collapse id="navbar-nav">
 
-                            {/* adding the search bar component*/}
-                            <SearchBar/>
+                                    {/* home link, potentially replaced with logo later */}
+                                    <Nav className="me-auto" style={{ marginLeft: "5vw" }}>
+                                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                                    </Nav>
 
-                            {/* Right-aligned links */}
-                            <Nav style={{ marginRight: "5vw" }}>
-                                <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
-                                <Nav.Link as={Link} to="/history">History</Nav.Link>
-                                <Nav.Link as={Link} to="/membership">Membership</Nav.Link>
-                                <Nav.Link as={Link} to="/upload">Upload</Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
+                                    {/* adding the search bar component*/}
+                                    <SearchBar/>
 
-                    </Container>
-                </Navbar>
+                                    {/* Right-aligned links */}
+                                    <Nav style={{ marginRight: "5vw" }}>
+                                        <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
+                                        <Nav.Link as={Link} to="/history">History</Nav.Link>
+                                        <Nav.Link as={Link} to="/membership">Membership</Nav.Link>
+                                        <Nav.Link as={Link} to="/upload">Upload</Nav.Link>
+                                    </Nav>
+                                </Navbar.Collapse>
 
+                            </Container>
+                        </Navbar>
 
-                {/* Routes */}
-                <Routes>
-                    <Route path="/about-us" element={<AboutUsPage />} />
-                    <Route path="/history" element={<HistoryPage />} />
-                    <Route path="/membership" element={<MembershipPage />} />
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/search" element={<SearchResults />} />
-                </Routes>
+                        {/* Routes */}
+                        <Routes>
+                            <Route path="/about-us" element={<AboutUsPage />} />
+                            <Route path="/history" element={<HistoryPage />} />
+                            <Route path="/membership" element={<MembershipPage />} />
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/search" element={<SearchResults />} />
+                        </Routes>
+                    </div>
+
+                    <div className={"mode-switch"}>
+                        {/* calling the DarkModeToggle component */}
+                        <FormGroup>
+                            <FormControlLabel
+                                control={<DarkModeToggle sx={{ m: 1 }}  checked={mode === "dark"}  onChange={toggleMode}
+                                /> } label="Dark mode switch"
+                            />
+                        </FormGroup>
+                    </div>
+                </Router>
             </div>
-        </Router>
+
+        </ModeContext.Provider>
     );
 }
 
