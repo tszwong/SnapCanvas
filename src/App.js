@@ -59,25 +59,25 @@ function App() {
                                 <Navbar.Collapse id="navbar-nav">
 
                                     {/* home link, potentially replaced with logo later */}
-                                    <Nav className="me-auto" style={{ marginLeft: "5vw" }}>
-                                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                                    <Nav className="me-auto" style={{ marginLeft: "3vw" }}>
+                                        <Nav.Link as={Link} to="/" id={"site-name-nav"}>Snapcanvas</Nav.Link>
                                     </Nav>
 
                                     {/* adding the search bar component*/}
                                     <SearchBar/>
 
                                     {/* Right-aligned links */}
-                                    <Nav style={{ marginRight: "5vw" }}>
+                                    <Nav style={{ marginRight: "3vw" }}>
                                         <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
                                         <Nav.Link as={Link} to="/history">History</Nav.Link>
                                         <Nav.Link as={Link} to="/membership">Membership</Nav.Link>
-                                        <Nav.Link as={Link} to="/upload">Upload</Nav.Link>
                                     </Nav>
                                 </Navbar.Collapse>
 
                             </Container>
                         </Navbar>
 
+                        {/*use resolve path and use match*/}
                         {/* Routes */}
                         <Routes>
                             <Route path="/about-us" element={<AboutUsPage />} />
@@ -93,7 +93,7 @@ function App() {
                         <FormGroup>
                             <FormControlLabel
                                 control={<DarkModeToggle sx={{ m: 1 }}  checked={mode === "dark"}  onChange={toggleMode}
-                                /> } label="Dark mode switch"
+                                /> } label="Theme Switch"
                             />
                         </FormGroup>
                     </div>
