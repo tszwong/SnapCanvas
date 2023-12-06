@@ -14,10 +14,10 @@ const SearchResultsPage = ({ images }) => {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 2vh;
+      margin: 3vh;
       padding: 2vh 2vh 5vh 2vh;
       font-size: calc(8px + 1vw);
-      border-radius: 4px;
+      border-radius: 2px;
       background-color: #f3f3f3;
 
       img {
