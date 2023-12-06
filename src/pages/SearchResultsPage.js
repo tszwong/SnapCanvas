@@ -49,7 +49,6 @@ const SearchResultsPage = ({ images }) => {
             <Container>
                 {images.map((image, index) => (
                     <Card key={index}>
-
                         <img src={image.src.medium} alt={image.alt} />
                     </Card>
                 ))}
