@@ -5,7 +5,6 @@ function HomePage() {
     return (
         <div className={"container"}>
             <h1>Welcome to SnapCanvas</h1>
-
             <Footer/>
         </div>
     );

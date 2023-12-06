@@ -86,7 +86,6 @@ nav li {
   margin: 0;
 }
 
-/* Change the button color */
 #search-btn {
   padding: 8px 12px;
   color: black;
@@ -105,7 +104,7 @@ nav li {
 
 .text-content {
   max-width: 80%; /* make the inner div take up 80% of the column width */
-  text-align: left; /* This ensures the text is left-aligned */
+  text-align: left; /* ensures the text is left-aligned */
 }
 
 /* the caption under the member's profile photos */
@@ -223,6 +222,27 @@ button:hover {
 
 .read-more-text.visible {
   display: block;
+}
+
+.signup-card {
+  padding: 2rem;
+}
+
+.signup-card .form-label {
+  font-size: 1.25rem;
+}
+
+.signup-card .form-control {
+  font-size: 1.25rem;
+}
+
+.signup-card .form-check-label {
+  font-size: 1.25rem;
+}
+
+#search-page-header {
+  margin-top: 2vh;
+  margin-left: 4.2vw;
 }
 
 .footer {
