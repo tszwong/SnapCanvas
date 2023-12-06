@@ -1,12 +1,60 @@
 import React from 'react';
+import Footer from '../components/footer';
+import { Container, Row, Col } from 'react-bootstrap';
+import styled from 'styled-components';
 
 // this page will display the search results from the Pexel API based on the user input
 const SearchResultsPage = ({ images }) => {
-    return ( // renders a div containing an image
+
+    const Card = styled.div `
+      border: 1px solid black;
+      width: 25vw;
+      max-width: 25vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2vh;
+      padding: 2vh 2vh 5vh 2vh;
+      font-size: calc(8px + 1vw);
+      border-radius: 4px;
+      background-color: #f3f3f3;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:hover {
+        opacity: 80%;
+        box-shadow: 7px 3px 3px black;
+        transition: 0.3s;
+      }
+    `
+
+  const Container = styled.div `
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:1vh;
+    justify-content: space-around;
+    `
+    
+    return ( // renders a div containing images
         <div>
-            {images.map((image, index) => (
-                <img key={index} src={image.src.medium} alt={image.alt} />
-            ))}
+            <div id={"search-page-header"}>
+                <h1 id={"page-title"}>Search Results...</h1>
+            </div>
+            <Container>
+                {images.map((image, index) => (
+                    <Card key={index}>
+
+                        <img src={image.src.medium} alt={image.alt} />
+                    </Card>
+                ))}
+            </Container>
+            <Footer/>
         </div>
     );
 };
