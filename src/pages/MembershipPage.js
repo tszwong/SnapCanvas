@@ -1,12 +1,14 @@
 import React from 'react';
+import {PremiumComponent} from '../components/premium.js';
 import Footer from '../components/footer.js';
-import SignUpForm from '../components/SignUpForm';
+// import SignUpForm from '../components/SignUpForm';
+
 
 function MembershipPage() {
     return (
         <div className={"containter"}>
-            <h1>SnapCanvas Premium Subscription</h1>
-            <SignUpForm/>
+            {/* <SignUpForm/> */}
+            <PremiumComponent/>
             <Footer/>
         </div>
     );
