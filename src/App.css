@@ -12,33 +12,99 @@
 }
 
 #dark {
-  background-color: #000;
+  background-color: #232026;
+  color: #E7DFDD;
 }
 
 #dark #nav-styles {
   background-color: #000 !important;
+  border-bottom-color: black;
+}
+
+#dark .nav-link {
+  color: white;
+}
+
+#dark .navbar-toggler {
+  background-color: #E7DFDD;
+  color: black;
+}
+
+#dark .form-control {
+  background-color: black !important;
+  color: white !important;
+}
+
+#dark .not-first-history, #dark .first-history {
+  border-color: #E7DFDD;
+}
+
+#dark .footer .text-muted, #dark .footer a {
+  color: #E7DFDD !important;
+}
+
+#site-name-nav {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 nav ul {
   display: flex;
-  gap: 1vw; /* Spacing between items */
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
+  list-style-type: none;
+  padding: 0;
 }
 
 nav a {
   padding: 1vw 1vw 1vh;
   text-decoration: none;
-  font-size: calc(2px + 1.5vh); /* Basic responsive font size */
+  text-transform: uppercase;
+  font-size: calc(2px + 1.5vh);
+}
+
+.nav-link {
+  color: #282c34;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#nav-styles {
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: white !important;
+  border-bottom: solid 2px #9b9b9b;
 }
 
 nav li {
-  margin: 0; /* Remove margins */
+  margin: 0;
+}
+
+#search-btn {
+  padding: 8px 12px;
+  color: black;
+  border: solid 2px #282c34 !important;
+  background-color: white !important;
+}
+
+#search-bar {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.form-control {
+  border: solid 2px #9b9b9b;
 }
 
 .text-content {
-  max-width: 80%; /* This will make the inner div take up 80% of the column width */
-  text-align: left; /* This ensures the text is left-aligned */
+  max-width: 80%; /* make the inner div take up 80% of the column width */
+  text-align: left; /* ensures the text is left-aligned */
 }
 
 /* the caption under the member's profile photos */
@@ -47,17 +113,22 @@ nav li {
   font-weight: bold;
   padding-top: 0.5vh;
   padding-bottom: 0.5vh;
-  background-color: #bdbdbd;
+  color: white;
+  background-color: #000000;
 }
 
 /* team badge in the history page */
 #team-badge {
   margin-top: 4vh;
-  margin-bottom: 1vh;
 }
 
 .row.frame {
   flex-wrap: nowrap;
+}
+
+.row {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 /* to make text that are in 4-column boxes look neater */
@@ -66,20 +137,121 @@ nav li {
 }
 
 /* style for the 1/3 photo 2/3 text components, cleaner spacing */
-.not-first {
-  margin-top: 10vh;
+.not-first, .not-first-history {
+  margin-top: 2vh;
 }
-.first {
+.first, .first-history {
   margin-top: 5vh;
+}
+
+.not-first-history, .first-history {
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 25px 40px;
+}
+
+.no-borders {
+  border: none;
+  margin-top: 0;
 }
 
 .img-fluid {
   padding-top: 0.5vh;
 }
 
+#page-header {
+  margin-top: 3vh;
+}
+
+#page-description {
+  font-size: 20px;
+}
+
+#photo-post-title {
+  margin-right: 1vw;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#photo-post-date {
+  margin-left: 1vw;
+}
+
+#photo-post-desc {
+  line-height: 2.2vh;
+}
+
+#photo-post-btn {
+  margin-top: 2vh;
+  text-align: center;
+}
+
+#photo-post-btn button {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  border-radius: 5px;
+}
+
+#about-us-title {
+  text-align: center;
+}
+
+#about-us-title .badge{
+  padding-left: 40px;
+  padding-right: 40px;
+  color: black;
+  text-transform: uppercase;
+}
+
+#read-more-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 10px;
+}
+button:hover {
+  transition: 0.5s;
+  background-color: black;
+  color: #E7DFDD;
+}
+
+.read-more-text.hidden {
+  display: none;
+}
+
+.read-more-text.visible {
+  display: block;
+}
+
+.signup-card {
+  padding: 2rem;
+}
+
+.signup-card .form-label {
+  font-size: 1.25rem;
+}
+
+.signup-card .form-control {
+  font-size: 1.25rem;
+}
+
+.signup-card .form-check-label {
+  font-size: 1.25rem;
+}
+
+#search-page-header {
+  margin-top: 2vh;
+  margin-left: 4.2vw;
+}
+
 .footer {
   margin-top: 15vh;
   margin-bottom: 5vh;
+}
+
+.footer a {
+  color: black;
 }
 
 @media (prefers-reduced-motion: no-preference) {

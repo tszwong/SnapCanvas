@@ -14,8 +14,6 @@ function HomePage() {
             </div>    
             <History/>
             <ImageGallery/>
-            
-
             <Footer/>
         </div>
     );
