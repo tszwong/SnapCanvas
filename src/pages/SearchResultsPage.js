@@ -50,6 +50,7 @@ const SearchResultsPage = ({ images }) => {
         <div>
             <div id={"search-page-header"}>
                 <h2 id={"page-title"}>Search Results...</h2>
+                <p>(Photos provided by <a href={"https://www.pexels.com/"}>Pexels</a>)</p>
             </div>
             <Container>
                 {images.map((image, index) => (

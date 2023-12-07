@@ -26,6 +26,7 @@ import AboutUsPage from './pages/AboutUsPage';
 import HistoryPage from './pages/HistoryPage';
 import MembershipPage from './pages/MembershipPage';
 import SearchResultsPage from './pages/SearchResultsPage';
+import Credits from './pages/Credits';
 
 export const ModeContext = React.createContext(null);
 
@@ -60,7 +61,7 @@ function App() {
 
                                     {/* home link, potentially replaced with logo later */}
                                     <Nav className="me-auto">
-                                        <Nav.Link as={Link} to="/" id={"site-name-nav"}>Snapcanvas.</Nav.Link>
+                                        <Nav.Link as={Link} to="/home" id={"site-name-nav"}>Snapcanvas.</Nav.Link>
                                     </Nav>
 
                                     {/* adding the search bar component*/}
@@ -83,8 +84,9 @@ function App() {
                             <Route path="/about-us" element={<AboutUsPage />} />
                             <Route path="/history" element={<HistoryPage />} />
                             <Route path="/membership" element={<MembershipPage />} />
-                            <Route path="/" element={<HomePage />} />
+                            <Route path="/home" element={<HomePage />} />
                             <Route path="/search" element={<SearchResults />} />
+                            <Route path="/credits" element={<Credits />} />
                         </Routes>
                     </div>
 
