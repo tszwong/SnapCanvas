@@ -5,6 +5,7 @@ import image2 from '../assets/pre2.jpg';
 import image3 from '../assets/pre3.jpg';
 import image4 from '../assets/pre4.jpg';
 import image5 from '../assets/pre5.jpg';
+import { Link } from 'react-router-dom';
 
 
 export function PremiumComponent2() {
@@ -102,7 +103,7 @@ return (
                 <p style={{ color: 'black' }}>
                     <strong>Only $9.99</strong> /month
                 </p>
-                <button>Sign Up Now</button>
+                <Link to="/signup"><button >Sign Up Now</button></Link>
             </Left>
             <PositionedImg2 src={image3}></PositionedImg2>
             <ImageCard1 src = {image4}></ImageCard1>

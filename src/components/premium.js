@@ -169,12 +169,6 @@ const Border = styled.div `
   background-color:#faf6eb
 `
 
-
-
-
-
-
-
   return (
     <>
     <Parent>

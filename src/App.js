@@ -28,6 +28,7 @@ import HistoryPage from './pages/HistoryPage';
 import MembershipPage from './pages/MembershipPage';
 import SearchResultsPage from './pages/SearchResultsPage';
 import Credits from './pages/Credits';
+import SignUpForm from './pages/SignUp';
 
 export const ModeContext = React.createContext(null);
 
@@ -73,6 +74,7 @@ function App() {
                                         <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
                                         <Nav.Link as={Link} to="/history">History</Nav.Link>
                                         <Nav.Link as={Link} to="/membership">Membership</Nav.Link>
+                                        <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
                                     </Nav>
 
                                     <div className={"mode-switch"}>
@@ -97,6 +99,7 @@ function App() {
                             <Route path="/history" element={<HistoryPage />} />
                             <Route path="/membership" element={<MembershipPage />} />
                             <Route path="/home" element={<HomePage />} />
+                            <Route path="/signup" element={<SignUpForm />} />
                             <Route path="/search" element={<SearchResults />} />
                             <Route path="/credits" element={<Credits />} />
                         </Routes>
