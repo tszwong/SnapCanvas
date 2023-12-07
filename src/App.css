@@ -76,8 +76,8 @@ nav a {
 }
 
 #nav-styles {
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   background-color: white !important;
   border-bottom: solid 2px #9b9b9b;
 }
@@ -123,7 +123,7 @@ nav li {
 }
 
 .row.frame {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .row {
@@ -138,10 +138,10 @@ nav li {
 
 /* style for the 1/3 photo 2/3 text components, cleaner spacing */
 .not-first, .not-first-history {
-  margin-top: 2vh;
+  margin-top: 3vh !important;
 }
 .first, .first-history {
-  margin-top: 5vh;
+  margin-top: 5vh !important;
 }
 
 .not-first-history, .first-history {
@@ -150,9 +150,18 @@ nav li {
   padding: 25px 40px;
 }
 
+.about-text {
+  line-height: 5vh;
+  font-size: calc(7px + 1.2vh);
+}
+
 .no-borders {
   border: none;
   margin-top: 0;
+}
+
+.about-last-row {
+  margin-top: 7vh !important;
 }
 
 .img-fluid {
@@ -178,7 +187,7 @@ nav li {
 }
 
 #photo-post-desc {
-  line-height: 2.2vh;
+  line-height: 4vh;
 }
 
 #photo-post-btn {
@@ -241,7 +250,7 @@ button:hover {
 }
 
 #search-page-header {
-  margin-top: 2vh;
+  margin-top: 4vh;
   margin-left: 4.2vw;
 }
 
@@ -252,42 +261,6 @@ button:hover {
 
 .footer a {
   color: black;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .search-container input[type="text"] {
-    width: 30vw; /* Set the width of the input box */
-  }
 }
 
 #slide {
@@ -327,3 +300,75 @@ button:hover {
   justify-content: center;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search-container input[type="text"] {
+    width: 30vw; /* Set the width of the input box */
+  }
+
+  #nav-styles .navbar-toggler-icon {
+    background-color: white;
+  }
+
+  #nav-styles button:hover {
+    background-color: white;
+  }
+
+  #nav-styles .navbar-nav .nav-link {
+    margin-top: 2vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #nav-styles #site-name-nav {
+    text-align: center;
+    width: 60%;
+    margin-bottom: 2vh;
+  }
+
+  .post-photo, .post-text {
+    width: 100%;
+  }
+
+  .post-text {
+    margin-top: 4vh;
+  }
+
+  .about-photo, .about-text {
+    width: 100%;
+  }
+
+  .about-photo {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+}

@@ -9,10 +9,10 @@ const ImgDesc = ({ imageSrc, altText, id, title, date, description, readmore }) 
 
     return (
         <div className="row">
-            <div className="col-4">
+            <div className="col-4 post-photo">
                 <img src={imageSrc} alt={altText} className="img-fluid" id={id}/>
             </div>
-            <div className="col-8">
+            <div className="col-8 post-text">
                 <div>
                     <h3><span id="photo-post-title">{title}</span> | <span id="photo-post-date">{date}</span></h3>
                     <hr/>
