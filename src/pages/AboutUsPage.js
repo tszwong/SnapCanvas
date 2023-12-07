@@ -44,7 +44,7 @@ function AboutUsPage() {
 
             <div id={"about-us-title"}>
                 <h1>
-                    <Badge id={"team-badge"} bg={"white"}>About Us</Badge>
+                    About Us
                 </h1>
             </div>
 

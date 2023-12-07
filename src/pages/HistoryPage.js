@@ -19,13 +19,6 @@ import Badge from 'react-bootstrap/Badge';
 import Stack from 'react-bootstrap/Stack';
 
 function HistoryPage() {
-    // random generated place holder text
-    const placeholder = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-    culpa qui officia deserunt mollit anim id est laborum.`;
-
     return (
         <div className={"container"}>
 
@@ -56,9 +49,20 @@ function HistoryPage() {
                              " and friends. Contact: WeChat = @jackywtk10, LinkedIn + Github = @tszwong, email = wongt@bu.edu."
                          }/>
                 <Profile imageSrc={tia_img} altText="Tia Zheng"
-                         name={"Tia Zheng"} major={"Computer Science"} description={placeholder}/>
+                         name={"Tia Zheng"} major={"Computer Science"} description={""}/>
                 <Profile imageSrc={simon_img} altText="Simon Yu"
-                         name={"Simon Yu"} major={"Advertising"} description={placeholder}/>
+                         name={"Simon Yu"} major={"Advertising"}
+                         description={
+                            "I'm Simon Yu, a 21-year-old currently immersed in the world of advertising at Boston University. " +
+                             "Alongside my academic pursuits, I find joy in various activities that fuel my creativity" +
+                             " and passion. Whether it's delving into the captivating realms of literature, indulging in" +
+                             " the magic of cinema, sculpting my physique at the gym, or capturing moments through the" +
+                             " lens of my camera, I thrive on the diverse experiences each brings. Beyond the confines" +
+                             " of academia, I channel my artistic energy into freelance projects, specializing in" +
+                             " short film production and photography. This dynamic blend of academic dedication and" +
+                             " creative exploration defines my journey, shaping the narrative of my life."
+                         }
+                />
                 <Profile imageSrc={tyler_img} altText="Tyler Best"
                          name={"Tyler Best"} major={"Fine Arts"}
                          description={
