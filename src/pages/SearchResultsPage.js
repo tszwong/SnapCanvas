@@ -14,10 +14,10 @@ const SearchResultsPage = ({ images }) => {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 2vh;
+      margin: 3vh;
       padding: 2vh 2vh 5vh 2vh;
       font-size: calc(8px + 1vw);
-      border-radius: 4px;
+      border-radius: 2px;
       background-color: #f3f3f3;
 
       img {
@@ -31,6 +31,11 @@ const SearchResultsPage = ({ images }) => {
         box-shadow: 7px 3px 3px black;
         transition: 0.3s;
       }
+
+      @media screen and (max-width: 750px) {
+        width: 100%;
+        max-width: 100%;
+      }
     `
 
   const Container = styled.div `
@@ -40,15 +45,15 @@ const SearchResultsPage = ({ images }) => {
     margin-top:1vh;
     justify-content: space-around;
     `
-    
+
     return ( // renders a div containing images
         <div>
             <div id={"search-page-header"}>
-                <h1 id={"page-title"}>Search Results...</h1>
+                <h2 id={"page-title"}>Search Results...</h2>
             </div>
             <Container>
                 {images.map((image, index) => (
-                    <Card key={index}>
+                    <Card className={"search-res-photo"} key={index}>
                         <img src={image.src.medium} alt={image.alt} />
                     </Card>
                 ))}

@@ -16,7 +16,7 @@ const Profile = ({ imageSrc, altText, id, name, major, description }) => {
 
 
     return (
-        <div className="col-3 polaroid" onClick={() => setModalShow(true)} style={{ cursor: 'pointer' }}>
+        <div className="col-md-3" onClick={() => setModalShow(true)} style={{ cursor: 'pointer' }}>
             <img src={imageSrc} alt={altText} className="img-fluid" id={id}/>
             <p id={"profile-photo-caption"}>{name}, {major}</p>
 
