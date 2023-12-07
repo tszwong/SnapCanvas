@@ -72,6 +72,8 @@ const Each = styled.p`
 
 
 
+
+
   return (
     <>
     <Parent>
