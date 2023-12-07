@@ -5,8 +5,9 @@ import {
     BrowserRouter as Router,
     Routes,
     useLocation,
-    Route, // <-- Add this import
-    Link
+    Route,
+    Link,
+    Navigate
 } from 'react-router-dom';
 
 // React, Material UI, and Bootstrap imports
@@ -91,6 +92,7 @@ function App() {
                         {/*use resolve path and use match*/}
                         {/* Routes */}
                         <Routes>
+                            <Route element={<Navigate to="/home" />} />
                             <Route path="/about-us" element={<AboutUsPage />} />
                             <Route path="/history" element={<HistoryPage />} />
                             <Route path="/membership" element={<MembershipPage />} />
