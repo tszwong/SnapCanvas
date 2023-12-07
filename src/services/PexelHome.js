@@ -4,8 +4,6 @@ import axios from 'axios';
 // get the api key from our .env file since we don't want to make our key public
 // initialize the Pexel client with the key
 const ImageGallery = () => {
-    
-    
 
   const Card = styled.div`
     border: 1px solid black;
@@ -26,10 +24,14 @@ const ImageGallery = () => {
         object-fit: cover;
     }
 
-
     &:hover {
       opacity: 70%;
       box-shadow: 10px 5px 5px gray;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 100%;
+      max-width: 100%;
     }
   `
 
@@ -38,12 +40,9 @@ const ImageGallery = () => {
     flex-wrap: wrap;
     justify-content: center;
     margin-top:5vh;
-
     justify-content: space-between;
   
   `
-
-
 
     const [images, setImages] = useState([]);
   

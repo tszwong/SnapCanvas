@@ -19,7 +19,6 @@ export function History(){
     `
 
     const Learn = styled.button `
-    
         position:absolute;
         top:80%;
         left: 50%;
@@ -28,6 +27,11 @@ export function History(){
         height:7vh;
         font-size:1vw;
 
+      @media screen and (max-width: 750px) {
+        width: 50%;
+        max-width: 100%;
+        font-size: calc(6px + 1vh);
+      }
     `
 
     const Textbox = styled.p `
@@ -43,11 +47,12 @@ export function History(){
         box-sizing: border-box;
         color:black;
 
-
-    ` 
-
-
-    
+      @media screen and (max-width: 750px) {
+        width: 85%;
+        max-width: 100%;
+      }
+      
+    `
 
     return(
         <>

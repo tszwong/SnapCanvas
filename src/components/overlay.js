@@ -14,7 +14,10 @@ export function Overlay() {
         width:100%;
         position: absolute;
         z-index:2;
-        
+
+      @media screen and (max-width: 750px) {
+        flex-direction: column;
+      }
     `
 
     const Heading = styled.div `
@@ -27,6 +30,11 @@ export function Overlay() {
         max-width:50%;
         opacity: 80%;
 
+      @media screen and (max-width: 750px) {
+        width: 90%;
+        max-width: 100%;
+      }
+
     `
 
     const Signholder = styled.div `
@@ -38,7 +46,12 @@ export function Overlay() {
         width:30vw;
         height:50vh;
         padding: 3vh;
-    
+
+      @media screen and (max-width: 750px) {
+        margin-top: 2vh;
+        width: 90%;
+        max-width: 100%;
+      }
     `
 
     const Toggle = styled.div `
@@ -57,6 +70,11 @@ export function Overlay() {
         display:flex;
         text-align: center;
         margin: 1vh;
+
+        @media screen and (max-width: 750px) {
+          width: 100%;
+          max-width: 100%;
+        }
     `
 
     const Button = styled.button `
@@ -66,10 +84,13 @@ export function Overlay() {
         &:hover{
             background-color:gray;
         }
+
+        @media screen and (max-width: 750px) {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
     `
-
-    
-
 
     return(
         <>
