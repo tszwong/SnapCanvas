@@ -59,8 +59,8 @@ function App() {
                                 <Navbar.Collapse id="navbar-nav">
 
                                     {/* home link, potentially replaced with logo later */}
-                                    <Nav className="me-auto" style={{ marginLeft: "3vw" }}>
-                                        <Nav.Link as={Link} to="/" id={"site-name-nav"}>Snapcanvas</Nav.Link>
+                                    <Nav className="me-auto">
+                                        <Nav.Link as={Link} to="/" id={"site-name-nav"}>Snapcanvas.</Nav.Link>
                                     </Nav>
 
                                     {/* adding the search bar component*/}
