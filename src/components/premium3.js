@@ -11,6 +11,11 @@ export function PremiumComponent3(){
         background-color: rgb(221, 221, 221);
         margin-top:3%;
         padding:5vh;
+        
+        @media screen and (max-width: 750px) {
+        flex-direction: column;
+        height: 180vh;
+      }
 
     `
 
@@ -21,13 +26,18 @@ export function PremiumComponent3(){
         border-radius: 8px;
         padding: 5%;
         color: white;
-        margin-bottom: 5vh
+        margin-bottom: 5vhs
     
     `
     const WhiteBox = styled(Boxing) `
         background-color:#faf6eb;;
         text-align: center;
         color: black;
+
+        @media screen and (max-width: 750px) {
+        flex-direction: column;
+        height: 60vh;
+      }
     `
 
     const Li = styled.li `
@@ -42,6 +52,12 @@ export function PremiumComponent3(){
         margin-top: 2vh;
         height:7vh;
         width: 20vw;
+
+        @media screen and (max-width: 750px) {
+            margin-top: 2vh;
+            height:10vh;
+            width: 25vw;
+      }
     `
     
     return(

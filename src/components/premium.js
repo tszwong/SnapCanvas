@@ -22,6 +22,11 @@ const Parent = styled.div`
   align-items: center;
   background-color: rgb(221, 221, 221);
 
+  @media screen and (max-width: 750px) {
+        flex-direction: column;
+        height: 180vh;
+      }
+
 `;
 
 const Small = styled.div`
@@ -44,6 +49,13 @@ const Box = styled.div`
   margin-bottom:2vh;
   align-items:center;
   background-color:white;
+
+  @media screen and (max-width: 750px) {
+        width: 90%;
+        max-width: 100%;
+      }
+
+  
   
 `
 
@@ -55,14 +67,25 @@ const Right = styled.div`
   left:8vh;
   display: flex;
   flex-direction: column;
+
+    @media screen and (max-width: 750px) {
+        width: 90%;
+        max-width: 100%;
+        top:0;
+        left:0;
+      }
 `
 
 const Left = styled.div`
   position: relative;
-
   width: 35vw;
   height: 40vh;
   text-align: center;
+
+  @media screen and (max-width: 750px) {
+        width: 90%;
+        max-width: 100%;
+      }
 `;
 
 const CarouselContainer = styled.div`
@@ -70,6 +93,12 @@ const CarouselContainer = styled.div`
   width: 34vw;
   height: 30vw;
   overflow: hidden;
+
+  @media screen and (max-width: 750px) {
+        width: 90%;
+        max-width: 100%;
+        height:90%;
+      }
 `;
 
 const Heading = styled.h1 `
@@ -85,6 +114,8 @@ const Heading = styled.h1 `
     text-align: center;
     justify-content: center;
     gap:1px;
+
+    
 `
 const PargraphBox = styled.div `
     position: absolute;
@@ -99,6 +130,11 @@ const PargraphBox = styled.div `
     padding-top: 3vh;
     align-items: center;
     border:1px solid black;
+
+    @media screen and (max-width: 750px) {
+        width: 90%;
+        max-width: 100%;
+      }
 `
 
 const Each = styled.p`
