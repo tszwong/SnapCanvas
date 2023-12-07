@@ -55,8 +55,6 @@ function HistoryPage() {
                             "When I am not studying, I like to explore my many interests. Currently I am trying to self-learn " +
                             "how to play the piano and also hit up the gym more often. " +
                             "(P.S. Although I don't spend much time dwelling on personality tests, I just know I have the better MBTI of INTJ)." 
-                            
-                         
                          }/>
                 <Profile imageSrc={simon_img} altText="Simon Yu"
                          name={"Simon Yu"} major={"Advertising"}
