@@ -49,7 +49,13 @@ function HistoryPage() {
                              " and friends. Contact: WeChat = @jackywtk10, LinkedIn + Github = @tszwong, email = wongt@bu.edu."
                          }/>
                 <Profile imageSrc={tia_img} altText="Tia Zheng"
-                         name={"Tia Zheng"} major={"Computer Science"} description={""}/>
+                         name={"Tia Zheng"} major={"Computer Science"} 
+                         description={"Hi, my name is Tia. I'm a sophomore at Boston University studying computer science. " + 
+                            "I'm trying to not be sleep fluid, but it's kind of hard when I stock up on so much deadlines. " +
+                            "When I am not studying, I like to explore my many interests. Currently I am trying to self-learn " +
+                            "how to play the piano and also hit up the gym more often. " +
+                            "(P.S. Although I don't spend much time dwelling on personality tests, I just know I have the better MBTI of INTJ)." 
+                         }/>
                 <Profile imageSrc={simon_img} altText="Simon Yu"
                          name={"Simon Yu"} major={"Advertising"}
                          description={
