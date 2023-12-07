@@ -9,6 +9,10 @@ import ski_photo_placeholder from "../assets/ski_photo_placeholder.jpg";
 import photo_1 from "../assets/jerry-zhang-hkhCV41gOpA-unsplash.jpg";
 import photo_2 from "../assets/marek-piwnicki-DgdJ_0us5SE-unsplash.jpg";
 import photo_3 from "../assets/daniel-leone-g30P1zcOzXo-unsplash.jpg";
+import tyler_img from "../assets/tylerbest.jpg";
+import simon_img from "../assets/simonyu.jpg";
+import tsz_img from "../assets/tszkitwong.jpg";
+import tia_img from "../assets/tiazheng.JPG";
 
 // Bootstrap imports
 import Badge from 'react-bootstrap/Badge';
@@ -44,14 +48,36 @@ function HistoryPage() {
                 themselves and whatever else you want
              */}
             <div className="row frame">
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
-                         name={"Tsz Kit Wong"} major={"Computer Science"} description={placeholder}/>
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
+                <Profile imageSrc={tsz_img} altText="Tsz Kit Wong"
+                         name={"Tsz Kit Wong"} major={"Computer Science"}
+                         description={
+                            "Hi, my favorite pokemon is Squirtle. My MBTI is ISFJ. I am from Hong Kong and I am a junior majoring in " +
+                             "Computer Science. My favorite singer is Jay Chou. I like skiing and spending time with my family, dog," +
+                             " and friends. Contact: WeChat = @jackywtk10, LinkedIn + Github = @tszwong, email = wongt@bu.edu."
+                         }/>
+                <Profile imageSrc={tia_img} altText="Tia Zheng"
                          name={"Tia Zheng"} major={"Computer Science"} description={placeholder}/>
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
+                <Profile imageSrc={simon_img} altText="Simon Yu"
                          name={"Simon Yu"} major={"Advertising"} description={placeholder}/>
-                <Profile imageSrc={ski_photo_placeholder} altText="Placeholder"
-                         name={"Tyler Best"} major={"Fine Arts"} description={placeholder}/>
+                <Profile imageSrc={tyler_img} altText="Tyler Best"
+                         name={"Tyler Best"} major={"Fine Arts"}
+                         description={
+                            "TYLER BEST / BIO" +
+                             "Graphic Designer , Creative Director" +
+                             "Hey there! I'm Tyler Best, a dedicated graphic designer nestled in Boston, MA. At Boston University, I dive into my studies while bringing my creative spark to life through TB Designs.\n" +
+                             "Background & Expertise\n" +
+                             "As the Founder and Creative Director of TB Designs, I thrive on crafting digital graphics that evoke emotions and tell compelling stories. I specialize in designing personalized logos for businesses and crafting eye-catching event flyers for various organizations, all while upholding design principles and mastering typography and layout.\n" +
+                             "Professional Journey\n" +
+                             "My design journey has led me to an internship at Clear Images Design Inc. There, I've honed my skills in curating engaging social media content, managing email communications, and creating impactful business ads for websites.\n" +
+                             "Community Engagement\n" +
+                             "Beyond design, I'm a passionate advocate and collaborator. As Co-chair of the Black Student Task Force at BU, I amplify Black student voices and spearhead impactful online initiatives. Additionally, I contribute my creative talents to Charcoal, a student-run magazine collective showcasing the academic achievements of Black students.\n" +
+                             "Educational Background\n" +
+                             "My educational path started with excelling in Graphic Design courses at Piscataway High School. At BU's College of Fine Arts, I've been honored on the Dean's List with Distinction. My research focuses on the role of Black contemporary art in challenging adultification, and my contributions to Piscataway's Permanent Art Collection underscore my commitment to creativity and innovation.\n" +
+                             "Let's Collaborate!\n" +
+                             "Ready to redefine your brand's narrative through visuals? Let's team up! Reach out to me at tylerbest801@gmail.com, and let's craft something extraordinary together. Follow my creative journey on Instagram: tylers.best.art and explore my evolving portfolio on my current website.\n" +
+                             "Let's make something remarkable!\n"
+                         }
+                />
             </div>
 
             {/* beginning of the features section, what features have been implemented when */}

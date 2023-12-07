@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import * as events from "events";
 
-const Profile = ({ imageSrc, altText, id, name, major, description }) => {
+const Profile = ({ imageSrc, altText, name, major, description }) => {
     const [modalShow, setModalShow] = useState(false);
 
     // Handler for closing the modal
@@ -17,7 +17,7 @@ const Profile = ({ imageSrc, altText, id, name, major, description }) => {
 
     return (
         <div className="col-md-3" onClick={() => setModalShow(true)} style={{ cursor: 'pointer' }}>
-            <img src={imageSrc} alt={altText} className="img-fluid" id={id}/>
+            <img src={imageSrc} alt={altText} className="img-fluid" id={"profile-photo"}/>
             <p id={"profile-photo-caption"}>{name}, {major}</p>
 
             {/* content that shows up in the modal when the images are clicked */}
@@ -28,9 +28,11 @@ const Profile = ({ imageSrc, altText, id, name, major, description }) => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <img src={imageSrc} alt="profile photo" className={"img-fluid"}/>
+                    <img src={imageSrc} alt="profile photo" className={"img-fluid modal-img"}/>
                     {/*  add a short description of each member  */}
-                    {description}
+                    <div className={"modal-desc"}>
+                        {description}
+                    </div>
                 </Modal.Body>
                 <Modal.Footer>
                     {/* button to close the modal, can be placed elsewhere */}

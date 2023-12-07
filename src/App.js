@@ -73,6 +73,16 @@ function App() {
                                         <Nav.Link as={Link} to="/history">History</Nav.Link>
                                         <Nav.Link as={Link} to="/membership">Membership</Nav.Link>
                                     </Nav>
+
+                                    <div className={"mode-switch"}>
+                                        {/* calling the DarkModeToggle component */}
+                                        <FormGroup>
+                                            <FormControlLabel
+                                                control={<DarkModeToggle sx={{ m: 1 }}  checked={mode === "dark"}  onChange={toggleMode}
+                                                /> } label="Theme Switch"
+                                            />
+                                        </FormGroup>
+                                    </div>
                                 </Navbar.Collapse>
 
                             </Container>
@@ -89,19 +99,8 @@ function App() {
                             <Route path="/credits" element={<Credits />} />
                         </Routes>
                     </div>
-
-                    <div className={"mode-switch"}>
-                        {/* calling the DarkModeToggle component */}
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<DarkModeToggle sx={{ m: 1 }}  checked={mode === "dark"}  onChange={toggleMode}
-                                /> } label="Theme Switch"
-                            />
-                        </FormGroup>
-                    </div>
                 </Router>
             </div>
-
         </ModeContext.Provider>
     );
 }
