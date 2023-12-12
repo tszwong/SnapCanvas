@@ -1,8 +1,15 @@
 import styled from "styled-components";
 import React from "react";
+import { Link } from 'react-router-dom';
+import {useState} from 'react';
 
 
 export function Overlay() {
+    const [displayText, setDisplayText] = useState('Hover or click a button~~');
+  
+    const handleHover = (text) => {
+      setDisplayText(text);
+    };
 
     const OverlayBox = styled.div `
         display: flex;
@@ -70,10 +77,12 @@ export function Overlay() {
         display:flex;
         text-align: center;
         margin: 1vh;
+        padding: 1vh;
 
         @media screen and (max-width: 750px) {
           width: 100%;
           max-width: 100%;
+
         }
     `
 
@@ -87,8 +96,7 @@ export function Overlay() {
 
         @media screen and (max-width: 750px) {
           display: block;
-          width: 100%;
-          max-width: 100%;
+          width: 15vw;
         }
     `
 
@@ -101,14 +109,25 @@ export function Overlay() {
                 </Heading>
                 <Signholder>
                     <Toggle>
-                        <Button>
-                            Login
-                        </Button>
-                        <Button>
-                            Sign Up
-                        </Button>
+                      <Link to="/signup">
+                          <Button
+                            onMouseEnter={() => handleHover('Log in to explore a personalized experience tailored just for you.' +
+                            ' Unlock exclusive features, save your preferences, and connect with a vibrant community of users.')}
+                            onMouseLeave={() => handleHover('Hover or click a button~~')}>
+                              Login
+                          </Button>
+                      </Link>  
+                      <Link to="/signup">
+                          <Button
+                            onMouseEnter={() => handleHover('Sign up to join our community and embark on a journey of discovery.' +
+                            ' Experience the benefits of membership and connect with like-minded individuals.')}
+                            onMouseLeave={() => handleHover('Hover or click a button~~')}>
+                              Sign Up
+                          </Button>
+                      </Link>
+
                     </Toggle>
-                    <Textbox>This is a description holder</Textbox>
+                    <Textbox>{displayText}</Textbox>
 
                 </Signholder>
             </OverlayBox>

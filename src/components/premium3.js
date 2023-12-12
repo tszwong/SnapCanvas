@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export function PremiumComponent3(){
 
@@ -26,7 +27,11 @@ export function PremiumComponent3(){
         border-radius: 8px;
         padding: 5%;
         color: white;
-        margin-bottom: 5vhs
+        margin-bottom: 5vh;
+
+        @media screen and (max-width: 750px) {
+            height: auto;
+  }
     
     `
     const WhiteBox = styled(Boxing) `
@@ -75,7 +80,7 @@ export function PremiumComponent3(){
                 <WhiteBox>
                 <H1>Elevate Your Experience with SnapCanvas Premium</H1>
                 <p>Unlock the full potential of SnapCanvas with our premium membership. Elevate your photo browsing experience and enjoy exclusive benefits designed to enhance your creativity.</p>
-                <Button>Renew Monthly - Cancel Anytime</Button>
+                <Link to="/signup"><Button>Renew Monthly - Cancel Anytime</Button></Link>
                 </WhiteBox>
                 <Boxing style={{textAlign:'center'}}>
                     <span class="fa fa-star checked" style={{marginRight: '10px'}}></span>

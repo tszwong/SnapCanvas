@@ -5,6 +5,7 @@ import {PremiumComponent3} from '../components/premium3.js';
 import {PremiumComponent4} from '../components/premium4.js';
 import Footer from '../components/footer.js';
 import Faq from "react-faq-component";
+import { Translate } from '@mui/icons-material';
 // import SignUpForm from '../components/SignUpForm';
 
 
@@ -45,8 +46,8 @@ const data = {
 
 const styles = {
     // bgColor: 'white',
-    titleTextColor: "blue",
-    rowTitleColor: "blue",
+    titleTextColor: "black",
+    rowTitleColor: "black",
     // rowContentColor: 'grey',
     // arrowColor: "red",
 };
@@ -61,18 +62,17 @@ const config = {
 function MembershipPage() {
     return (
         <div className={"containter"}>
-            {/* <SignUpForm/> */}
             <PremiumComponent1/>
             <PremiumComponent2/>
             <PremiumComponent3/>
             <PremiumComponent4/> 
-            <div>
+            <div style={{width:'90vw', margin: '5vh auto'}}>
             <Faq
                 data={data}
                 styles={styles}
                 config={config}
             />
-        </div>
+            </div>
             <Footer/>
         </div>
     );

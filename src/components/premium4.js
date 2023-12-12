@@ -10,6 +10,11 @@ export function PremiumComponent4(){
         height:120vh;
         display:flex;
         flex-direction: column;
+
+        @media screen and (max-width: 750px) {
+            height:auto;
+            align-items: center;
+  }
     `
 
 
@@ -22,6 +27,14 @@ export function PremiumComponent4(){
         margin-top: 3vw;
         padding-bottom: 3vh;
         text-align: center;
+
+        
+      @media screen and (max-width: 750px) {
+        border: none;
+        border-bottom: 10px double #000;
+        width: 80vw;
+        margin-top:4vh;
+  }
 
     `
 
@@ -39,6 +52,14 @@ export function PremiumComponent4(){
       opacity: 70%;
       box-shadow: 10px 5px 5px gray;
     }
+
+    
+    @media screen and (max-width: 750px) {
+        height:auto;
+        width:80vw;
+        padding:4vh;
+        margin-bottom: 5vh;
+  }
     
         
     `
@@ -48,6 +69,12 @@ export function PremiumComponent4(){
         flex-direction: row;
         justify-content: space-evenly;
         margin-top:5vh;
+
+        @media screen and (max-width: 750px) {
+            flex-direction: column;
+  }
+
+
     `
 
     const H2 = styled.h2 `

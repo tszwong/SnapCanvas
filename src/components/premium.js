@@ -15,7 +15,6 @@ const Parent = styled.div`
   margin-top:5vh;
   position: relative;
   height: 90vh;
-  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -71,8 +70,9 @@ const Right = styled.div`
     @media screen and (max-width: 750px) {
         width: 90%;
         max-width: 100%;
-        top:0;
-        left:0;
+        left: 0;
+        display: flex;
+        align-items: center;
       }
 `
 
@@ -166,7 +166,15 @@ const Border = styled.div `
   top:-6vh;
   left: -6vw;
   height: 70vh;
-  background-color:#faf6eb
+  background-color:#faf6eb;
+
+  @media screen and (max-width: 750px) {
+        left: 0;
+        padding: 4vh 0;
+        display: flex;
+        justify-content: center;
+      }
+
 `
 
   return (
@@ -190,7 +198,7 @@ const Border = styled.div `
           <Small>No Bundles</Small>
           <Small>No Add-Ons</Small>
         </Box>
-        <CarouselContainer>
+        <CarouselContainer style={{border:'1px solid black'}}>
           <CarouselAuto customImages={images}/>
         </CarouselContainer>
       </Right>

@@ -102,7 +102,7 @@ function HistoryPage() {
                         "creative force from advertising."
                     }
                     readmore={" United by their diverse talents and a shared dream of transforming the stock photography " +
-                        "sphere, they birthed SnapCanvas in 2015. The quartet envisioned a platform where the marriage " +
+                        "sphere, they birthed SnapCanvas in 2023. The quartet envisioned a platform where the marriage " +
                         "of technology and artistry would redefine the stock photo landscape, offering users a unique and " +
                         "expansive collection of licensed images."
                     }
