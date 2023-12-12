@@ -1,16 +1,16 @@
 import React from 'react';
 import Footer from '../components/footer';
 import SignUpForm from '../components/SignUpForm';
-import { Container, Row, Col } from 'react-bootstrap';
-import styled from 'styled-components';
+import { Container } from 'react-bootstrap';
 
-// this page will display the search results from the Pexel API based on the user input
 const SignUp = () => {
     return ( // renders a div containing images
         <div>
             <Container>
+                {/* put the sign up form in a bootstrap container */}
                 <SignUpForm/>
             </Container>
+
             <Footer/>
         </div>
     );

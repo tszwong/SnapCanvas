@@ -1,3 +1,4 @@
+// component + react + Material UI imports
 import React from 'react';
 import {PremiumComponent1} from '../components/premium.js';
 import {PremiumComponent2} from '../components/premium2.js';
@@ -5,12 +6,10 @@ import {PremiumComponent3} from '../components/premium3.js';
 import {PremiumComponent4} from '../components/premium4.js';
 import Footer from '../components/footer.js';
 import Faq from "react-faq-component";
-import { Translate } from '@mui/icons-material';
-// import SignUpForm from '../components/SignUpForm';
-
-
 
 const data = {
+
+    // FAQ section with drop down content
     title: "FAQ's",
     rows: [
         {
@@ -45,19 +44,9 @@ const data = {
 };
 
 const styles = {
-    // bgColor: 'white',
     titleTextColor: "black",
     rowTitleColor: "black",
-    // rowContentColor: 'grey',
-    // arrowColor: "red",
 };
-
-const config = {
-    // animate: true,
-    // arrowIcon: "V",
-    // tabFocus: true
-};
-
 
 function MembershipPage() {
     return (
@@ -70,7 +59,6 @@ function MembershipPage() {
             <Faq
                 data={data}
                 styles={styles}
-                config={config}
             />
             </div>
             <Footer/>

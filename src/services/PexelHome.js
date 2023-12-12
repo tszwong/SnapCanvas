@@ -1,8 +1,8 @@
+// component + react + axio imports
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
-// get the api key from our .env file since we don't want to make our key public
-// initialize the Pexel client with the key
+import axios from 'axios';  // for api data fetching
+
 const ImageGallery = () => {
 
   const Card = styled.div`
@@ -45,9 +45,11 @@ const ImageGallery = () => {
   `
 
     const [images, setImages] = useState([]);
-  
+
+    // main api fetching function
     useEffect(() => {
       const fetchImages = async () => {
+        // implemented error handling
         try {
           const response = await axios.get('https://api.pexels.com/v1/curated', {
             headers: {
@@ -63,25 +65,26 @@ const ImageGallery = () => {
           console.error('Error fetching images:', error);
         }
       };
-  
-      fetchImages();
+
+      fetchImages();  // call the function
     }, []);
   
     return (
         <>
-      <Container>
-        {images.map((image) => (
-            <Card>
-            <img
-                key={image.id}
-                src={image.src.large}
-                alt={image.photographer}
-                style={{ width: '100%', marginBottom: '20px' }}
-            />
-          </Card>
-        ))}
-      </Container>
-      </>
+          <Container>
+            {/* mapping the images */}
+            {images.map((image) => (
+                <Card>
+                <img
+                    key={image.id}
+                    src={image.src.large}
+                    alt={image.photographer}
+                    style={{ width: '100%', marginBottom: '20px' }}
+                />
+              </Card>
+            ))}
+          </Container>
+        </>
     );
   };
   

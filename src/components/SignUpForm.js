@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Form, Button, Card, Container, Row, Col } from 'react-bootstrap';
 
 const SignUpForm = () => {
     return (
+
+        // putting the form in a bootstrap container
         <Container className="d-flex justify-content-center align-items-center">
             <Row>
                 <Col lg={12} md={12} className="mx-auto">
                     <Card className="mt-5 signup-card">
                         <Card.Body>
+                            {/* title of the form */}
                             <Card.Title className="text-center sign-up-title">Sign Up for SnapCanvas</Card.Title>
+
+                            {/* required field 1: email, checks if email is entered */}
                             <Form>
                                 <Form.Group className="mb-4" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
@@ -17,10 +22,11 @@ const SignUpForm = () => {
                                         name="email"
                                         placeholder="Enter email"
                                         required
-                                        size="lg" // Makes the input larger
+                                        size="lg"
                                     />
                                 </Form.Group>
 
+                                {/* required field 2: password, hidden the password text */}
                                 <Form.Group className="mb-4" controlId="formBasicPassword">
                                     <Form.Label>Password</Form.Label>
                                     <Form.Control
@@ -28,10 +34,11 @@ const SignUpForm = () => {
                                         name="password"
                                         placeholder="Password"
                                         required
-                                        size="lg" // Makes the input larger
+                                        size="lg"
                                     />
                                 </Form.Group>
 
+                                {/* radio buttons for selecting plans */}
                                 <Form.Group className="mb-4">
                                     <Form.Check
                                         type="radio"
@@ -40,7 +47,7 @@ const SignUpForm = () => {
                                         id="premiumPlan"
                                         value="premium"
                                         defaultChecked
-                                        size="lg" // Makes the radio button larger
+                                        size="lg"
                                     />
                                     <Form.Check
                                         type="radio"
@@ -49,7 +56,7 @@ const SignUpForm = () => {
                                         id="premiumPlan"
                                         value="premium"
                                         defaultChecked
-                                        size="lg" // Makes the radio button larger
+                                        size="lg"
                                     />
                                     <Form.Check
                                         type="radio"
@@ -58,12 +65,14 @@ const SignUpForm = () => {
                                         id="premiumPlan"
                                         value="premium"
                                         defaultChecked
-                                        size="lg" // Makes the radio button larger
+                                        size="lg"
                                     />
                                 </Form.Group>
 
+                                {/* sign up button, does not have any functionality besides clearing the form once clicked */}
+                                {/* down the line could implement firebase OAuth2 authentication systems, but just for show currently */}
                                 <div className="d-grid">
-                                    <Button variant="primary" type="submit" size="lg"> {/* Makes the button larger */}
+                                    <Button variant="primary" type="submit" size="lg">
                                         Sign Up
                                     </Button>
                                 </div>

@@ -8,6 +8,7 @@ function HomePage() {
         <div className={"container"}>
             <div>
                 <h1>
+                    {/* page header/title */}
                     <Badge id={"team-badge"} bg={"dark"}>Credits</Badge>
                 </h1>
             </div>
@@ -20,16 +21,6 @@ function HomePage() {
                     <a href="https://www.pexels.com/license/">Pexels Copyright Policy.</a>
                 </h4>
             </div>
-
-            {/*  UNCOMMENT COMPONENT TEMPLATE FOR CREDIT COPY AND USE  */}
-            {/* <PhotoCredit
-               CreatorName={""}
-               CreatorLink={""}
-               ImgLink={""}
-               Desc={""}
-               PageLink={""}
-               PageName={""}
-            /> */}
 
             {/* About us page photo credits */}
             <div className={"row frame not-first-history"}>
@@ -117,7 +108,7 @@ function HomePage() {
                 />
             </div>
 
-                        {/* Home page photo credits */}
+            {/* Home page photo credits */}
             <div className={"row frame not-first-history"}>
                 <div>
                     <h2 id={"page-title"}>Home Page Photo Credits</h2>
@@ -147,10 +138,8 @@ function HomePage() {
                     PageName={"home"}
                 />
             </div>
-
-
             
-                        {/* Membership page photo credits */}
+            {/* Membership page photo credits */}
             <div className={"row frame not-first-history"}>
                 <div>
                     <h2 id={"page-title"}>Membership Page Photo Credits</h2>
@@ -247,7 +236,6 @@ function HomePage() {
 
             </div>
 
-            {/* probably need to add more to features to footer besides the credits */}
             <Footer/>
         </div>
     );

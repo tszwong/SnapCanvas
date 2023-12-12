@@ -17,7 +17,7 @@ const SearchBar = () => {
         event.preventDefault();
         searchImages(query).then(results => {
             navigate('/search', { state: { images: results } });  // redirect to page displaying search results
-        }).catch(error => {
+        }).catch(error => { // error handling
             console.error("Error fetching images:", error);  // if the input resulted in no images found
         });
     };
@@ -37,6 +37,8 @@ const SearchBar = () => {
                     value={query}
                     onChange={handleSearchChange}
                 />
+
+                {/* search button */}
                 <Button variant="dark" type="submit" id={"search-btn"}>
                     {/* logo free from bootstrap */}
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

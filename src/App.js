@@ -1,6 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 
+// React, Material UI, and Bootstrap imports
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import React, { useState } from "react";
 import {
     BrowserRouter as Router,
     Routes,
@@ -9,19 +13,12 @@ import {
     Link,
     Navigate
 } from 'react-router-dom';
-
-// React, Material UI, and Bootstrap imports
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import React, { useState, createContext } from "react";
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 // component imports
 import SearchBar from './components/SearchBar';
 import DarkModeToggle from "./components/DarkModeToggle";
-
 import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import HistoryPage from './pages/HistoryPage';
@@ -46,16 +43,11 @@ function App() {
         <ModeContext.Provider value={{ mode, toggleMode }}>
 
             <div id={mode}>
-                <Router>
+                <Router basename="/wongt/cs103/projects/final-project">
                     <div>
                         {/* Navigation, using React Bootstrap to make things easier */}
                         <Navbar expand="lg" className="bg-body-tertiary" id={"nav-styles"}>
                             <Container fluid>
-
-                                {/* will be uncommented and used when we have some sort of logo created */}
-                                {/*<Navbar.Brand as={Link} to="/">*/}
-                                {/*    <img src={logo} alt="Logo" width="30" height="30" />*/}
-                                {/*</Navbar.Brand>*/}
 
                                 {/* hamburger nav will be enabled for smaller screens*/}
                                 <Navbar.Toggle aria-controls="navbar-nav" />
@@ -77,6 +69,7 @@ function App() {
                                         <Nav.Link as={Link} to="/signup">Sign Up</Nav.Link>
                                     </Nav>
 
+                                    {/* dark mode toggle button placed in the nav bar to make it easier to access */}
                                     <div className={"mode-switch"}>
                                         {/* calling the DarkModeToggle component */}
                                         <FormGroup>
@@ -91,10 +84,11 @@ function App() {
                             </Container>
                         </Navbar>
 
-                        {/*use resolve path and use match*/}
-                        {/* Routes */}
+                        {/* linking all the route endpoints to the corresponding components */}
                         <Routes>
+                            {/* we want the default endpoint to be /home */}
                             <Route element={<Navigate to="/home" />} />
+
                             <Route path="/about-us" element={<AboutUsPage />} />
                             <Route path="/history" element={<HistoryPage />} />
                             <Route path="/membership" element={<MembershipPage />} />

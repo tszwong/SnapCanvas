@@ -316,7 +316,7 @@ button:hover {
   position: relative;
   width: 100%;
   height: auto;
-  text-align: center; /* Center the content */
+  text-align: center;
 }
 
 #image-slideshow {
@@ -324,7 +324,7 @@ button:hover {
   max-width: 100%;
   position: static;
   margin-top: 3vh;
-  margin: auto; /* Center the slideshow */
+  margin: auto;
 }
 
 .carousel {
@@ -370,9 +370,10 @@ button:hover {
   }
 }
 
+/* mobile and smaller screens */
 @media screen and (max-width: 750px) {
   .search-container input[type="text"] {
-    width: 30vw; /* Set the width of the input box */
+    width: 30vw;
   }
 
   #nav-styles .navbar-toggler-icon {
@@ -437,6 +438,7 @@ button:hover {
   }
 }
 
+/* medium size screens, fix the nav bar display */
 @media screen and (max-width: 1000px) {
   #nav-styles .navbar-nav .nav-link {
     margin-top: 2vh;

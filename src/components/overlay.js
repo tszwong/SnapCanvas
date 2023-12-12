@@ -110,6 +110,7 @@ export function Overlay() {
                 <Signholder>
                     <Toggle>
                       <Link to="/signup">
+                          {/* content will change depending on hover status */}
                           <Button
                             onMouseEnter={() => handleHover('Log in to explore a personalized experience tailored just for you.' +
                             ' Unlock exclusive features, save your preferences, and connect with a vibrant community of users.')}
@@ -118,6 +119,7 @@ export function Overlay() {
                           </Button>
                       </Link>  
                       <Link to="/signup">
+                          {/* content will change depending on hover status */}
                           <Button
                             onMouseEnter={() => handleHover('Sign up to join our community and embark on a journey of discovery.' +
                             ' Experience the benefits of membership and connect with like-minded individuals.')}
@@ -127,6 +129,8 @@ export function Overlay() {
                       </Link>
 
                     </Toggle>
+
+                    {/* default display text when not hovered */}
                     <Textbox>{displayText}</Textbox>
 
                 </Signholder>

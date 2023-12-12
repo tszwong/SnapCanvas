@@ -11,7 +11,7 @@ const Profile = ({ imageSrc, altText, name, major, description }) => {
             event.stopPropagation();
         }
         console.log('Close button clicked');  // for debugging, checking if the handler recognizes the button being pressed
-        setModalShow(false);  // close the modal
+        setModalShow(false);  // close the modal, update the state
     };
 
 
@@ -28,7 +28,7 @@ const Profile = ({ imageSrc, altText, name, major, description }) => {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <img src={imageSrc} alt="profile photo" className={"img-fluid modal-img"}/>
+                    <img src={imageSrc} alt="profile" className={"img-fluid modal-img"}/>
                     {/*  add a short description of each member  */}
                     <div className={"modal-desc"}>
                         {description}

@@ -2,18 +2,13 @@ import React from 'react';
 
 // Component + Asset imports
 import Footer from '../components/footer.js';
-import PhotoPost from "../components/PhotoPost";
 import ImgDesc from "../components/PhotoPost";
-import ski_photo_placeholder from '../assets/ski_photo_placeholder.jpg';
-import Typewriter from 'react-ts-typewriter';  // package for typewriter effect
 import photo_1 from '../assets/oleg-chursin-vaPoJZB9Mzg-unsplash.jpg';
 import photo_2 from '../assets/lucian-v_mTgSs6UiY-unsplash.jpg';
 import photo_3 from '../assets/marco-pregnolato-ahYX46whD8s-unsplash.jpg';
 import photo_4 from '../assets/olivier-miche-OZACaaUskhg-unsplash.jpg';
 import photo_5 from '../assets/jerry-zhang-jmjuzMFcUIs-unsplash.jpg';
 import photo_6 from '../assets/alessio-soggetti-IuSemNxGS88-unsplash.jpg';
-
-import Badge from 'react-bootstrap/Badge';
 
 // Profile component for displaying an image
 const Profile = ({ imageSrc, altText, id }) => (
@@ -49,7 +44,8 @@ function AboutUsPage() {
             </div>
 
             <hr/>
-            {/* main content section, still need to decide what to put for each */}
+            {/* main content section */}
+            {/* 1/3 photo 2/3 description */}
             <div className="row frame no-borders">
                 <Profile imageSrc={photo_1} altText="mountain" id="first_image" />
                 <TextColumn text={
@@ -63,6 +59,7 @@ function AboutUsPage() {
                 } />
             </div>
 
+            {/* 1/3 photo 2/3 description */}
             <div className="row frame not-first no-borders">
                 <Profile imageSrc={photo_2} altText="mountain" id="second_image" />
                 <TextColumn text={
@@ -74,6 +71,7 @@ function AboutUsPage() {
                 } />
             </div>
 
+            {/* 1/3 photo 2/3 description */}
             <div className="row frame not-first-history about-last-row">
                 <ImgDesc
                     imageSrc={photo_6}
@@ -96,6 +94,7 @@ function AboutUsPage() {
                 />
             </div>
 
+            {/* three photos in a row */}
             <div className="row frame not-first no-borders">
                 <Profile imageSrc={photo_3} altText="mountain" id="first_image" />
                 <Profile imageSrc={photo_4} altText="mountain" id="first_image" />

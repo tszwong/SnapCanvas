@@ -83,11 +83,11 @@ export function PremiumComponent3(){
                 <Link to="/signup"><Button>Renew Monthly - Cancel Anytime</Button></Link>
                 </WhiteBox>
                 <Boxing style={{textAlign:'center'}}>
-                    <span class="fa fa-star checked" style={{marginRight: '10px'}}></span>
-                    <span class="fa fa-star checked" style={{marginRight: '10px'}}></span>
-                    <span class="fa fa-star checked" style={{marginRight: '10px'}}></span>
-                    <span class="fa fa-star checked" style={{marginRight: '10px'}}></span>
-                    <span class="fa fa-star checked" style={{marginRight: '10px'}}></span>
+                    <span className={"fa fa-star checked"} style={{marginRight: '10px'}}></span>
+                    <span className={"fa fa-star checked"} style={{marginRight: '10px'}}></span>
+                    <span className={"fa fa-star checked"} style={{marginRight: '10px'}}></span>
+                    <span className={"fa fa-star checked"} style={{marginRight: '10px'}}></span>
+                    <span className={"fa fa-star checked"} style={{marginRight: '10px'}}></span>
                     <H1>"Unleash Your Wanderlust with SnapCanvas Premium"</H1>
                     <p>Elevate your photo exploration experience with SnapCanvas Premium. Gain exclusive access to high-resolution photos, unlock hidden gems, and enjoy seamless browsing without limits. Elevate your travel inspiration and fuel your wanderlust with our premium membership.</p>
                 </Boxing>

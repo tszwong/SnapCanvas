@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const ImgDesc = ({ imageSrc, altText, id, title, date, description, readmore }) => {
     const [isReadMoreVisible, setReadMoreVisible] = useState(false);  // state for visibility of the extra content
     const toggleReadMore = () => {  // function to change the state
-        setReadMoreVisible(!isReadMoreVisible);
+        setReadMoreVisible(!isReadMoreVisible);  // update to opposite state
     };
 
     return (
@@ -28,6 +28,7 @@ const ImgDesc = ({ imageSrc, altText, id, title, date, description, readmore }) 
                 <div id="photo-post-btn">
                     <button id={"read-more-btn"} onClick={toggleReadMore}>
                         {/* the text in btn will change depending if the extra content is displayed */}
+                        {/* extra content that is initially hidden will appear or display when clicked */}
                         {isReadMoreVisible ? 'Read Less' : 'Read More'}
                     </button>
                 </div>

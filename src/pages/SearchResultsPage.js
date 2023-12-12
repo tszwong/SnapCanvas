@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/footer';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import styled from 'styled-components';
 
 // this page will display the search results from the Pexel API based on the user input
@@ -50,15 +50,19 @@ const SearchResultsPage = ({ images }) => {
         <div>
             <div id={"search-page-header"}>
                 <h2 id={"page-title"}>Search Results...</h2>
+                {/* credit statement as required by Pexels */}
                 <p>(Photos provided by <a href={"https://www.pexels.com/"}>Pexels</a>)</p>
             </div>
             <Container>
+                {/* map the images */}
                 {images.map((image, index) => (
                     <Card className={"search-res-photo"} key={index}>
+                        {/* get medium sized images only */}
                         <img src={image.src.medium} alt={image.alt} />
                     </Card>
                 ))}
             </Container>
+
             <Footer/>
         </div>
     );

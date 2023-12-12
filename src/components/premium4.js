@@ -14,9 +14,8 @@ export function PremiumComponent4(){
         @media screen and (max-width: 750px) {
             height:auto;
             align-items: center;
-  }
+      }
     `
-
 
     const Head = styled.h1 `
         border: 10px double #000;
@@ -27,15 +26,13 @@ export function PremiumComponent4(){
         margin-top: 3vw;
         padding-bottom: 3vh;
         text-align: center;
-
-        
+      
       @media screen and (max-width: 750px) {
         border: none;
         border-bottom: 10px double #000;
         width: 80vw;
         margin-top:4vh;
-  }
-
+      }
     `
 
     const PlanCard = styled.div `
@@ -49,21 +46,17 @@ export function PremiumComponent4(){
         background-color: #faf6eb;
 
         &:hover {
-      opacity: 70%;
-      box-shadow: 10px 5px 5px gray;
-    }
-
-    
-    @media screen and (max-width: 750px) {
-        height:auto;
-        width:80vw;
-        padding:4vh;
-        margin-bottom: 5vh;
-  }
-    
+          opacity: 70%;
+          box-shadow: 10px 5px 5px gray;
+        }
         
+        @media screen and (max-width: 750px) {
+            height:auto;
+            width:80vw;
+            padding:4vh;
+            margin-bottom: 5vh;
+      }
     `
-
     const PlanBox = styled.div `
         display: flex;
         flex-direction: row;
@@ -72,9 +65,7 @@ export function PremiumComponent4(){
 
         @media screen and (max-width: 750px) {
             flex-direction: column;
-  }
-
-
+        }
     `
 
     const H2 = styled.h2 `
@@ -90,7 +81,6 @@ export function PremiumComponent4(){
         padding:0;
         line-height: 2;
     `
-
 
     return(
         <>

@@ -63,7 +63,10 @@ export function History(){
     return(
         <>
             <Learning>
+                {/* route the learn more button to our history page */}
                 <Link to="/history"><Learn>Learn More</Learn></Link>
+
+                {/* using imported typing animation package */}
                 <TypeAnimation
                     sequence={['Get Your Premium Today!', 500, 'Exclusive Content!', 500, 'Unlimited Downloads!', 500]}
                     style={{ fontSize: '2em' }}

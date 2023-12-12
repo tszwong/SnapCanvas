@@ -1,11 +1,9 @@
 // component + assset imports
 import React from 'react';
 import Footer from '../components/footer.js';
-import PhotoPost from "../components/PhotoPost";
 import ImgDesc from "../components/PhotoPost";
 import Profile from "../components/ProfileModalComponent";
 import Typewriter from 'react-ts-typewriter';  // package for typewriter effect
-import ski_photo_placeholder from "../assets/ski_photo_placeholder.jpg";
 import photo_1 from "../assets/jerry-zhang-hkhCV41gOpA-unsplash.jpg";
 import photo_2 from "../assets/marek-piwnicki-DgdJ_0us5SE-unsplash.jpg";
 import photo_3 from "../assets/daniel-leone-g30P1zcOzXo-unsplash.jpg";
@@ -16,30 +14,31 @@ import tia_img from "../assets/tiazheng.JPG";
 
 // Bootstrap imports
 import Badge from 'react-bootstrap/Badge';
-import Stack from 'react-bootstrap/Stack';
 
 function HistoryPage() {
     return (
         <div className={"container"}>
 
-            {/* this will probably be replaced later idk */}
             <div id={"page-header"}>
                 <h1 id={"page-title"}>
-                    {/* using an imported typewriter component from npmjs */}
+                    {/* using an imported typewriter animation component from npmjs */}
                     <Typewriter loop={true} speed={400} text={"SnapCanvas"} />
                 </h1>
+
+                {/* page description */}
                 <p id={"page-description"}>"Where technology dances with art, delivering a kaleidoscope of creativity through a curated canvas of
                     licensed stock photos, redefining visual storytelling for the world."</p>
             </div>
 
+            {/* page header/title */}
             <div>
                 <h1>
                     <Badge id={"team-badge"} bg={"dark"}>Meet Our Team</Badge>
                 </h1>
             </div>
-            {/* members profiles section, will need portraits of each memeber + a short description about
-                themselves and whatever else you want
-             */}
+
+            {/* main content of page starting from here*/}
+            {/* members profiles section, portraits of each memeber + a short description about themselves */}
             <div className="row frame">
                 <Profile imageSrc={tsz_img} altText="Tsz Kit Wong"
                          name={"Tsz Kit Wong"} major={"Computer Science"}
@@ -90,7 +89,7 @@ function HistoryPage() {
                 />
             </div>
 
-            {/* beginning of the features section, what features have been implemented when */}
+            {/* beginning of the features section, what features have been implemented and when */}
             <div className="row frame first-history">
                 <ImgDesc
                     imageSrc={photo_1}
@@ -144,7 +143,6 @@ function HistoryPage() {
                 />
             </div>
 
-            {/* probably need to add more to features to footer besides the credits */}
             <Footer/>
         </div>
     );

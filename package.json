@@ -2,6 +2,7 @@
   "name": "snapcanvas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "wongt/cs103/projects/final-project/build",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
