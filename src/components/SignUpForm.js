@@ -35,6 +35,15 @@ const SignUpForm = () => {
                                 <Form.Group className="mb-4">
                                     <Form.Check
                                         type="radio"
+                                        label="Premium Plus - $14.99/month"
+                                        name="plan"
+                                        id="premiumPlan"
+                                        value="premium"
+                                        defaultChecked
+                                        size="lg" // Makes the radio button larger
+                                    />
+                                    <Form.Check
+                                        type="radio"
                                         label="Premium Plan - $9.99/month"
                                         name="plan"
                                         id="premiumPlan"

@@ -306,7 +306,6 @@ button:hover {
 }
 
 #slide {
-  margin-top:5%;
   width: 100%;
   padding: 0;
   position: static;
@@ -317,7 +316,6 @@ button:hover {
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: 3vh;
   text-align: center; /* Center the content */
 }
 

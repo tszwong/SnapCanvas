@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Historyimg from '../assets/history.png';
+import { Link } from 'react-router-dom';
 
 export function History(){
 
@@ -15,6 +16,10 @@ export function History(){
 
         &:hover{
             opacity:80%;
+        }
+
+        @media screen and (max-width:750px) {
+            height:65vh;
         }
     `
 
@@ -50,6 +55,7 @@ export function History(){
       @media screen and (max-width: 750px) {
         width: 85%;
         max-width: 100%;
+        height: auto;
       }
       
     `
@@ -57,14 +63,15 @@ export function History(){
     return(
         <>
             <Learning>
-                <Learn>Learn More</Learn>
+                <Link to="/history"><Learn>Learn More</Learn></Link>
                 <TypeAnimation
                     sequence={['Get Your Premium Today!', 500, 'Exclusive Content!', 500, 'Unlimited Downloads!', 500]}
                     style={{ fontSize: '2em' }}
                     repeat={Infinity}
                 />
                 <Textbox>
-                    dcghjdksfnzknkdsj,vnj jksdnfjkdnjk,ffnvj d.knvkfd,jn.sdnkjndsnfdkfnfdjfndf dfhdhkjfhkfndkfjndifjisdkfnkjnfkdsjfisdlfnkjd
+                    Founded in 2023 as a humble final project for CS 103, our photo gallery serves to capture life's unique moments,
+                    turning them into timeless narratives. Join us in celebrating our specific moments and milesstones that define our team.
                 </Textbox>
             </Learning>
         </>

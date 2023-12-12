@@ -13,11 +13,18 @@ export function PremiumComponent2() {
   const Parent = styled.div`
   position: relative;
   height: 160vh;
-  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+
+  @media screen and (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-content: space-evenly;
+  }
 
 `;
 
@@ -29,6 +36,13 @@ const Left = styled.div`
   text-align: center;
   border:3px solid black;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+
+  @media screen and (max-width: 750px) {
+    width: 81%;
+    height: 50vh;
+    padding-bottom: 5vh;
+    top: 8vh;
+  }
 `;
 
 const Right = styled.div`
@@ -39,6 +53,16 @@ const Right = styled.div`
     width: 50vw;
     display: flex;
     justify-content: space-evenly;
+
+    @media screen and (max-width: 750px) {
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 210vh;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
     
 `
 
@@ -60,12 +84,24 @@ const ImageCard = styled.img `
     width: 18vw;
     border:3px solid black;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+
+    @media screen and (max-width: 750px) {
+    height: 90%;
+    width: 81%;
+  }
 `
 const PositionedImg = styled(ImageCard) `
 
     position:relative;
     top:8vh;
     left:2vw;
+
+    @media screen and (max-width: 750px) {
+    left: 0;
+    top: 0;
+    height: 90%;
+    width: 81%;
+  }
 `
 
 const PositionedImg2 = styled(ImageCard) `
@@ -73,6 +109,14 @@ const PositionedImg2 = styled(ImageCard) `
     position:absolute;
     top:60vh;
     left:10vw;
+
+    @media screen and (max-width: 750px) {
+    position: relative;
+    top: 13vh;
+    left: 0;
+    height: 90%;
+    width: 81%;
+  }
 `
 
 const PositionedImg3 = styled(ImageCard) `
@@ -80,6 +124,15 @@ const PositionedImg3 = styled(ImageCard) `
     position:absolute;
     top:94vh;
     left:72vw;
+
+    @media screen and (max-width: 750px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 81%;
+  }
+    
 `
 
 const ImageCard1 = styled.img `
@@ -91,6 +144,15 @@ const ImageCard1 = styled.img `
     transform:translateX(-50%);
     border:3px solid black;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+
+    @media screen and (max-width: 750px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform:translateX(0%);
+    height: 90%;
+    width: 81%;
+  }
 `
 
 
