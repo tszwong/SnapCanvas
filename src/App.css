@@ -433,6 +433,10 @@ button:hover {
     display: block;
     width: 50%;
   }
+
+  .sign-up-title {
+    margin-bottom: 3vh !important;
+  }
 }
 
 @media screen and (max-width: 1000px) {

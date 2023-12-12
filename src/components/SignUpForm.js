@@ -8,7 +8,7 @@ const SignUpForm = () => {
                 <Col lg={12} md={12} className="mx-auto">
                     <Card className="mt-5 signup-card">
                         <Card.Body>
-                            <Card.Title className="text-center">Sign Up for SnapCanvas</Card.Title>
+                            <Card.Title className="text-center sign-up-title">Sign Up for SnapCanvas</Card.Title>
                             <Form>
                                 <Form.Group className="mb-4" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
